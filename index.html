@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript" src="./debounce.js"></script>
+<script type="text/javascript">
+
+function move (arg) {
+  console.log(this, arg)
+  console.log(Date.now())
+  return 111
+}
+document.onmousemove = debounce(move, 300, true)
+// document.onmousemove = move
+</script>
+</html>
