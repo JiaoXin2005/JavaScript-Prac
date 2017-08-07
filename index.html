@@ -7,15 +7,16 @@
 <body>
 
 </body>
-<script type="text/javascript" src="./debounce.js"></script>
+<!-- <script type="text/javascript" src="./debounce.js"></script> -->
+<script type="text/javascript" src="./throttle.js"></script>
 <script type="text/javascript">
 
 function move (arg) {
   console.log(this, arg)
   console.log(Date.now())
-  return 111
 }
-document.onmousemove = debounce(move, 300, true)
+// document.onmousemove = debounce(move, 300, true)
+document.onmousemove = throttle(move, 1000, true)
 // document.onmousemove = move
 </script>
 </html>
